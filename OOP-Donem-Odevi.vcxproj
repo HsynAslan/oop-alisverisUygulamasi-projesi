@@ -130,7 +130,7 @@
     <ClCompile Include="OOP-Donem-Odevi.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="yonetici.h" />
+    <ClInclude Include="classlar.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

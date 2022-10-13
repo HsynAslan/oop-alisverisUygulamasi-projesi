@@ -10,6 +10,9 @@ public:
 	void setName(string name);
 	void setLName(string lName);
 	void setSifre(int password);
+	void kiyafetUrunGirisi();
+	void kuryeEkleme();
+
 
 	string getName()const;
 	string getLName()const;
