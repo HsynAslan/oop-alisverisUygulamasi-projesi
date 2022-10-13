@@ -1,12 +1,12 @@
 ﻿#include <fstream>
 #include <iostream>
-using namespace std;
-
+#include <cstring>  
 #include <stdlib.h>
 #include <string>
+#include <string.h>
 #include <conio.h>
 
-
+using namespace std;
 
 int txtDekiToplamSayi=0;
 bool boolIsimSoyisimSifreKontrol;
@@ -67,7 +67,20 @@ void yoneticiEkrani() {
     }
 }
 
+void oneriSikayetYazma() {
+    /*cout << "lütfen yazmak istediğiniz öneri veya şikayeti yazdıktan sonra enter'a basınız.." << endl;
+    char *onerigirdi;
+    cin >> onerigirdi;
+    cout << "oneri:" << onerigirdi << endl;*/
 
+    
+    // burda kaldım 13.10.2022
+
+    /*ofstream sikayetDosyayaYazma;
+    sikayetDosyayaYazma.open("oneri.txt", ios_base::app);
+    sikayetDosyayaYazma << oneriGirdi;
+    sikayetDosyayaYazma.close();*/
+}
 
 void musteriEkrani() {
     cout << "--- Doğrulandı ---" << endl;
@@ -85,7 +98,9 @@ void musteriEkrani() {
     case 2:
         cout << "2.worked" << endl;
     case 3:
-        cout << "3.worked" << endl;
+        system("CLS");
+        oneriSikayetYazma();
+        break;
     case 4:
         cout << "4.worked" << endl;
     case 5:
@@ -143,7 +158,7 @@ void yoneticiMusteriGirisi() {
         if (isimSoyisimSifreKontrol(uygDakiYoneticiIsmi, uygDakiYoneticiSoyIsmi, uygDakiYoneticiSifresi) == 1) {
             system("CLS");
             cout << "--- Doğrulandı ---\n" << endl;
-            // müşteri ekranları
+            musteriEkrani();
             break;
         }
         else { cout << "Giriş Bilgileri Hatalı..\a\n" << endl; }
@@ -156,7 +171,7 @@ void yoneticiMusteriGirisi() {
 bool uyeSifreCheck(string name) {
     for (size_t i = 0; i < sizeof(name)-1; i++)
     {
-        if (name[i] == '*' | '+' | '-' | '/'  ){
+        if (name[i] == '*' | name[i] == '+' | name[i] == '-' | name[i] == '/' ){
             return true;
         }
     }
@@ -173,9 +188,15 @@ bool uyeDTarihiCheck(string tarih) {
     return false;
     
 }
-//bool uyeEPosta(string ePosta) {
-//
-//}
+bool uyeEPostaCheck(string ePosta) {
+    for (int i = 0; i < sizeof(ePosta); i++)
+    {
+        if (ePosta[i] == '@') {
+            return true;
+        }
+    }
+    return false;
+}
 
 
 void uyeKaydiEkrani() {
@@ -190,13 +211,39 @@ void uyeKaydiEkrani() {
     cin >> uyeSoyIsım;
     cout << "Lütfen Şifrenizi Giriniz.." << endl;
     cin >> uyeSifre;
+    while (uyeSifreCheck(uyeSifre) != 1) {
+        cout << "Güçsüz şifre lütfen /, *, -, + karakterlerinden birini şifrenizde bulundurun.." << endl;
+        cin >> uyeSifre;
+    }
     cout << "Lütfen Dogum Tarihinizi Giriniz.." << endl;
     cin >> uyeDTarihi;
-    uyeDTarihiCheck(uyeDTarihi);
+    while(uyeDTarihiCheck(uyeDTarihi)!=1){
+        cout << "Yanlış Tarih !!\a\n" << "Lütfen ay.gün.yıl formatında doldurunuz..\n" << endl;
+        cin >> uyeDTarihi;
+    }
     cout << "Lütfen E-Posta Adresinizi Giriniz.." << endl;
     cin >> uygEPosta;
+    while (uyeEPostaCheck(uygEPosta)!=1) {
+        cout << "Yanlış E-posta !!\a\n" << "Lütfen içinde @ geçen formatta giriniz..\n" << endl;
+        cin >> uygEPosta;
+    }
+
+    //ofstream dosyaYaz("dosya.txt");
+    //dosyaYaz << "C++ ile yaziliyorum.";
+    //dosyaYaz.close();
+
+    /*string uyeIsım;
+    string uyeSoyIsım;
+    string uyeSifre;
+    string uyeDTarihi;
+    string uygEPosta;*/
     
     
+
+    ofstream dosyaYaz;
+    dosyaYaz.open("yonetici.txt", ios_base::app);
+    dosyaYaz << uyeIsım << " " << uyeSoyIsım << " " << uyeSifre << " " << uyeDTarihi << " " << uygEPosta << "\n";
+    dosyaYaz.close();
 }
 
 void anaMenu() {
@@ -233,9 +280,10 @@ void anaMenu() {
 int main()
 {
 
-    setlocale(LC_ALL, "Turkish");
+    setlocale(LC_ALL, "turkish");
     anaMenu();
     
+
    
     //isimSoyisimSifreKontrol("Huseyin", "Aslan", "456");
     //cout << boolIsimSoyisimSifreKontrol;
