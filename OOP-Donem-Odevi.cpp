@@ -35,7 +35,7 @@ bool isimSoyisimSifreKontrol(string name, string lastName, string password) { //
         size_t found3 = tekBirSatir.find(boslukArama, found2+1); // 3.boslugu bulma
         if (found != string::npos) // found2 ?
             int oAnkiBosluk3 = found3;
-        string txtDekiSifre = tekBirSatir.substr(found2 + 1,found3 - found2); // sifreyi cekme // hata var
+        string txtDekiSifre = tekBirSatir.substr(found2 + 1,(found3 - found2)-1); // sifreyi cekme // hata var
 
 
 
@@ -63,18 +63,83 @@ void yoneticiEkrani() {
     switch (yoneticiEkraniGirdi)
     {
     case 1:
-        // burası yapılacak ilk
-        cout << "Ürün girişi için" << endl;
+        cout << "Hangi Kategöriye Ekleme Yapmak İstiyorsunuz..\n" << endl;
+        // Elbise, Tişört, Pantolon, Gömlek, Etek ve Ayakkabı
+        cout << "1.Elbise\n2.Tişort\n3.Pantolon\n4.Gömlek\n5.Etek\n6.Ayakkabı" << endl;
 
-        cout << "1.worked" << endl;
+
+
+
+        /*
+         string onerigirdi;
+
+    ofstream sikayetdosyayayazma;
+    sikayetdosyayayazma.open("oneri.txt", ios_base::app);
+    sikayetdosyayayazma << uygDakiYoneticiIsmi <<" "<<uygDakiYoneticiSoyIsmi<<": ";
+    sikayetdosyayayazma.close();
+        */
+        /*
+        
+
+
+        string tekBirSatir;
+    string boslukArama = " ";
+    ifstream dosyaOkuma("yonetici.txt");
+    while (getline(dosyaOkuma, tekBirSatir)) {
+        size_t found = tekBirSatir.find(boslukArama); // ilk bosluk bulma
+        if (found != string::npos)
+            int oAnkiBosluk = found;
+        string txtDekiIsim = tekBirSatir.substr(0, found); // ilk kelimeyi cekme
+        
+        
+        */
+
+
+        int kategoriGirdi;
+        cin >> kategoriGirdi;
+        switch (kategoriGirdi)
+        {
+        case 1:
+            string tekBirSatir;
+            string kisaCizgiBulma = "-";
+            ifstream dosyaOkuma("elbise.txt");
+            //kaç satır olduğunu bilmeliyiz
+            int güncelSatirSayisi=0;
+            while (getline(dosyaOkuma, tekBirSatir)) {
+                güncelSatirSayisi++;
+            }
+            cout << "Ürününüzün İsmini Giriniz - (string !!)\n" << endl;
+            string eklenmekIstenenUrunIsmi;
+            cin >> eklenmekIstenenUrunIsmi;
+            cout << "Lütfen Renk Bilgisini Giriniz..\n" << endl;
+            string eklenmekIstenenUrunRengi;
+            cin >> eklenmekIstenenUrunRengi;
+            cout << "Lütfen Fiyat Giriniz..\n" << endl;
+            double eklenmekIstenenUrunFiyati;
+            cin >> eklenmekIstenenUrunFiyati;
+
+            ofstream elbiseUrunEkleme;
+            elbiseUrunEkleme.open("elbise.txt", ios_base::app);
+            elbiseUrunEkleme << güncelSatirSayisi + 1 << "-" << eklenmekIstenenUrunRengi << "-" << eklenmekIstenenUrunIsmi << "-" << eklenmekIstenenUrunFiyati ;
+            elbiseUrunEkleme.close();
+
+            break;
+       
+        
+        
+        }
     case 2:
         cout << "2.worked" << endl;
+        break;
     case 3:
         cout << "3.worked" << endl;
+        break;
     case 4:
         cout << "4.worked" << endl;
+        break;
     case 5:
         cout << "5.worked" << endl;
+        break;
     }
 }
 
@@ -184,6 +249,12 @@ void yoneticiMusteriGirisi() {
         cin >> uygDakiYoneticiSifresi;
         // yonetici ve musteri girisi kontrol
         if (isimSoyisimSifreKontrol(uygDakiYoneticiIsmi, uygDakiYoneticiSoyIsmi, uygDakiYoneticiSifresi) == 1 && yoneticiMusteriCheck(uygDakiYoneticiIsmi, uygDakiYoneticiSoyIsmi, uygDakiYoneticiSifresi)==1) {
+            
+            kisi kisi1(uygDakiYoneticiIsmi, uygDakiYoneticiSoyIsmi);
+            yonetici yonetici1(uygDakiYoneticiIsmi, uygDakiYoneticiSoyIsmi, uygDakiYoneticiSifresi);
+            
+
+
             system("CLS");
             cout << "--- Doğrulandı ---\n" << endl;
             yoneticiEkrani();
@@ -205,7 +276,15 @@ void yoneticiMusteriGirisi() {
         cout << "Maksimum 10 karakter girebilirsiniz.." << endl;
         cin >> uygDakiYoneticiSifresi;
 
-        if (isimSoyisimSifreKontrol(uygDakiYoneticiIsmi, uygDakiYoneticiSoyIsmi, uygDakiYoneticiSifresi) == 1) {
+        if (isimSoyisimSifreKontrol(uygDakiYoneticiIsmi, uygDakiYoneticiSoyIsmi, uygDakiYoneticiSifresi) == 1 && yoneticiMusteriCheck(uygDakiYoneticiIsmi, uygDakiYoneticiSoyIsmi, uygDakiYoneticiSifresi) == 0) {
+            
+            // kisi kisi2(uygDakiYoneticiIsmi, uygDakiYoneticiSoyIsmi);
+            // // kullanici(string isim, string soyisim, string sifre2, string dTarihi2, string ePosta2) : kisi(isim, soyisim)
+            // kullanici kullanici1();
+
+            kisi kisi2(uygDakiYoneticiIsmi, uygDakiYoneticiSoyIsmi);
+            kullanici kullanici1(uygDakiYoneticiIsmi, uygDakiYoneticiSoyIsmi, uygDakiYoneticiSifresi);
+
             system("CLS");
             cout << "--- Doğrulandı ---\n" << endl;
             musteriEkrani();
@@ -217,7 +296,6 @@ void yoneticiMusteriGirisi() {
         break;
     }
 }
-
 bool uyeSifreCheck(string name) {
     for (size_t i = 0; i < sizeof(name) - 1; i++)
     {
@@ -296,6 +374,12 @@ void uyeKaydiEkrani() {
     dosyaYaz.close();
 }
 
+
+
+
+    
+
+
 void anaMenu() {
     cout << "1. Sisteme giriş" << endl;
     cout << "2. Üye kaydı" << endl;
@@ -312,11 +396,13 @@ void anaMenu() {
         break;
     case 2:
         system("CLS");
-        uyeKaydiEkrani();
+        
+        
+        // burda uye kaydı ekranını çağırmak yerine .h dosyasındann yararlanmalıyız bence
         break;
     case 3:
         system("CLS");
-        cout << "3" << endl;
+        exit(0);
         break;
     default:
         cout << "3 Seçenekten birini seçip enter'a basın..\a\n" << endl;

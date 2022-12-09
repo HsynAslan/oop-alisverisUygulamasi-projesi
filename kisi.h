@@ -4,21 +4,32 @@ using namespace std;
 
 class kisi {
 public:
-	kisi(string isim, string soyisim) {
+	kisi(string isim = "NULL", string soyisim = "NULL") {
 		ad = isim;
 		soyad = soyisim;
 	}
 	string ad;
 	string soyad;
 	string telNo;
+	
 };
 
 class kullanici : public kisi {
 public:
-	kullanici(string isim, string soyisim, string sifre2, string dTarihi2, string ePosta2) : kisi(isim, soyisim) {
+	kullanici(string isim = "NULL", string soyisim = "NULL", string sifre2 = "NULL", string dTarihi2 = "NULL", string ePosta2 = "NULL") : kisi(isim, soyisim) {
+		// þifre dTarihi ePosta okeyse 
 		sifre = sifre2;
 		dTarihi = dTarihi2;
 		ePosta = ePosta2;
+		
+		
+		
+		
+
+
+
+		// txtye yazalým burda
+
 	}
 	string kullanici_adi;
 	string ePosta;
@@ -26,7 +37,11 @@ public:
 	string sifre;
 	string indirim_kodu;
 	string dTarihi;
+
+	
+	
 };
+
 
 class yonetici : public kisi {
 public:
