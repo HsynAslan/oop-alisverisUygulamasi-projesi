@@ -2,10 +2,10 @@
 C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(26,36): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
 C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(30,38): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
 C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(37,38): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
-C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(196,36): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
-C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(200,38): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
-C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(207,38): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
-C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(298,12): warning C4554: '|': olası hata için işleç önceliğini denetleyin; önceliği netleştirmek için parantez kullanın
-C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(298,78): warning C4554: '|': olası hata için işleç önceliğini denetleyin; önceliği netleştirmek için parantez kullanın
-C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(223): warning C4715: 'yoneticiMusteriCheck': tüm denetim yolları değer döndürmez
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(410,36): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(414,38): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(421,38): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(512,12): warning C4554: '|': olası hata için işleç önceliğini denetleyin; önceliği netleştirmek için parantez kullanın
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(512,78): warning C4554: '|': olası hata için işleç önceliğini denetleyin; önceliği netleştirmek için parantez kullanın
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(437): warning C4715: 'yoneticiMusteriCheck': tüm denetim yolları değer döndürmez
   OOP-Donem-Odevi.vcxproj -> C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\x64\Debug\OOP-Donem-Odevi.exe

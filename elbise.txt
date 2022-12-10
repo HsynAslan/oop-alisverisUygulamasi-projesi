@@ -1,2 +1,3 @@
-1-Siyah-Bluz Elbise-300
-2-Mavi-Hamile Elbise-2803-ceket-kot-320
+1-S-Bluz Elbise-300
+2-M-Hamile Elbise-280
+3-S-koton kot ceket

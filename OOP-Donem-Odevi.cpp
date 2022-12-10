@@ -63,83 +63,293 @@ void yoneticiEkrani() {
     switch (yoneticiEkraniGirdi)
     {
     case 1:
+        system("CLS");
         cout << "Hangi Kategöriye Ekleme Yapmak İstiyorsunuz..\n" << endl;
         // Elbise, Tişört, Pantolon, Gömlek, Etek ve Ayakkabı
         cout << "1.Elbise\n2.Tişort\n3.Pantolon\n4.Gömlek\n5.Etek\n6.Ayakkabı" << endl;
 
-
-
-
-        /*
-         string onerigirdi;
-
-    ofstream sikayetdosyayayazma;
-    sikayetdosyayayazma.open("oneri.txt", ios_base::app);
-    sikayetdosyayayazma << uygDakiYoneticiIsmi <<" "<<uygDakiYoneticiSoyIsmi<<": ";
-    sikayetdosyayayazma.close();
-        */
-        /*
-        
-
-
-        string tekBirSatir;
-    string boslukArama = " ";
-    ifstream dosyaOkuma("yonetici.txt");
-    while (getline(dosyaOkuma, tekBirSatir)) {
-        size_t found = tekBirSatir.find(boslukArama); // ilk bosluk bulma
-        if (found != string::npos)
-            int oAnkiBosluk = found;
-        string txtDekiIsim = tekBirSatir.substr(0, found); // ilk kelimeyi cekme
-        
-        
-        */
-
-
         int kategoriGirdi;
         cin >> kategoriGirdi;
-        switch (kategoriGirdi)
-        {
-        case 1:
-            string tekBirSatir;
-            string kisaCizgiBulma = "-";
+
+        if (kategoriGirdi == 1) {                                       // elbise
+            system("CLS");
+            string tekBirSatir1;
             ifstream dosyaOkuma("elbise.txt");
+
             //kaç satır olduğunu bilmeliyiz
-            int güncelSatirSayisi=0;
-            while (getline(dosyaOkuma, tekBirSatir)) {
+            int güncelSatirSayisi = 1;
+            while (getline(dosyaOkuma, tekBirSatir1)) {
                 güncelSatirSayisi++;
             }
-            cout << "Ürününüzün İsmini Giriniz - (string !!)\n" << endl;
+            dosyaOkuma.close();
+
+            ofstream guncelSatirSayisiYazma;
+            guncelSatirSayisiYazma.open("elbise.txt", ios_base::app);
+            guncelSatirSayisiYazma << güncelSatirSayisi << "-";
+            guncelSatirSayisiYazma.close();
+
+
+            cout << "Lütfen Renk Bilgisini Giriniz.. (! Tek Karakter Giriniz M K B S !)\n" << endl;
+            char eklenmekIstenenUrunRengi;
+            cin >> eklenmekIstenenUrunRengi;
+
+            ofstream renkYazma;
+            renkYazma.open("elbise.txt", ios_base::app);
+            renkYazma << eklenmekIstenenUrunRengi << "-";
+            renkYazma.close();
+
+
+            cout << "Ürününüzün İsmini Giriniz - (string !! tek kelime)\n" << endl;
             string eklenmekIstenenUrunIsmi;
             cin >> eklenmekIstenenUrunIsmi;
-            cout << "Lütfen Renk Bilgisini Giriniz..\n" << endl;
-            string eklenmekIstenenUrunRengi;
-            cin >> eklenmekIstenenUrunRengi;
+
+            ofstream isimYazma;
+            isimYazma.open("elbise.txt", ios_base::app);
+            isimYazma << eklenmekIstenenUrunIsmi;
+            isimYazma.close();
+
             cout << "Lütfen Fiyat Giriniz..\n" << endl;
             double eklenmekIstenenUrunFiyati;
             cin >> eklenmekIstenenUrunFiyati;
 
-            ofstream elbiseUrunEkleme;
-            elbiseUrunEkleme.open("elbise.txt", ios_base::app);
-            elbiseUrunEkleme << güncelSatirSayisi + 1 << "-" << eklenmekIstenenUrunRengi << "-" << eklenmekIstenenUrunIsmi << "-" << eklenmekIstenenUrunFiyati ;
-            elbiseUrunEkleme.close();
-
-            break;
-       
-        
-        
+            ofstream fiyatYazma;
+            fiyatYazma.open("elbise.txt", ios_base::app);
+            fiyatYazma << "-" << eklenmekIstenenUrunFiyati << "\n";
+            fiyatYazma.close();
         }
-    case 2:
-        cout << "2.worked" << endl;
-        break;
-    case 3:
-        cout << "3.worked" << endl;
-        break;
-    case 4:
-        cout << "4.worked" << endl;
-        break;
-    case 5:
-        cout << "5.worked" << endl;
-        break;
+        else if (kategoriGirdi == 2) {
+            system("CLS");
+            string tekBirSatir1;
+            ifstream dosyaOkuma("tisort.txt");
+
+            //kaç satır olduğunu bilmeliyiz
+            int güncelSatirSayisi = 1;
+            while (getline(dosyaOkuma, tekBirSatir1)) {
+                güncelSatirSayisi++;
+            }
+            dosyaOkuma.close();
+
+            ofstream guncelSatirSayisiYazma;
+            guncelSatirSayisiYazma.open("tisort.txt", ios_base::app);
+            guncelSatirSayisiYazma << güncelSatirSayisi << "-";
+            guncelSatirSayisiYazma.close();
+
+
+            cout << "Lütfen Renk Bilgisini Giriniz.. (! Tek Karakter Giriniz M K B S !)\n" << endl;
+            char eklenmekIstenenUrunRengi;
+            cin >> eklenmekIstenenUrunRengi;
+
+            ofstream renkYazma;
+            renkYazma.open("tisort.txt", ios_base::app);
+            renkYazma << eklenmekIstenenUrunRengi << "-";
+            renkYazma.close();
+
+
+            cout << "Ürününüzün İsmini Giriniz - (string !! tek kelime)\n" << endl;
+            string eklenmekIstenenUrunIsmi;
+            cin >> eklenmekIstenenUrunIsmi;
+
+            ofstream isimYazma;
+            isimYazma.open("tisort.txt", ios_base::app);
+            isimYazma << eklenmekIstenenUrunIsmi;
+            isimYazma.close();
+
+            cout << "Lütfen Fiyat Giriniz..\n" << endl;
+            double eklenmekIstenenUrunFiyati;
+            cin >> eklenmekIstenenUrunFiyati;
+
+            ofstream fiyatYazma;
+            fiyatYazma.open("tisort.txt", ios_base::app);
+            fiyatYazma << "-" << eklenmekIstenenUrunFiyati << "\n";
+            fiyatYazma.close();
+        }
+        else if (kategoriGirdi == 3) {
+            system("CLS");
+            string tekBirSatir1;
+            ifstream dosyaOkuma("pantolon.txt");
+
+            //kaç satır olduğunu bilmeliyiz
+            int güncelSatirSayisi = 1;
+            while (getline(dosyaOkuma, tekBirSatir1)) {
+                güncelSatirSayisi++;
+            }
+            dosyaOkuma.close();
+
+            ofstream guncelSatirSayisiYazma;
+            guncelSatirSayisiYazma.open("pantolon.txt", ios_base::app);
+            guncelSatirSayisiYazma << güncelSatirSayisi << "-";
+            guncelSatirSayisiYazma.close();
+
+
+            cout << "Lütfen Renk Bilgisini Giriniz.. (! Tek Karakter Giriniz M K B S !)\n" << endl;
+            char eklenmekIstenenUrunRengi;
+            cin >> eklenmekIstenenUrunRengi;
+
+            ofstream renkYazma;
+            renkYazma.open("pantolon.txt", ios_base::app);
+            renkYazma << eklenmekIstenenUrunRengi << "-";
+            renkYazma.close();
+
+
+            cout << "Ürününüzün İsmini Giriniz - (string !! tek kelime)\n" << endl;
+            string eklenmekIstenenUrunIsmi;
+            cin >> eklenmekIstenenUrunIsmi;
+
+            ofstream isimYazma;
+            isimYazma.open("pantolon.txt", ios_base::app);
+            isimYazma << eklenmekIstenenUrunIsmi;
+            isimYazma.close();
+
+            cout << "Lütfen Fiyat Giriniz..\n" << endl;
+            double eklenmekIstenenUrunFiyati;
+            cin >> eklenmekIstenenUrunFiyati;
+
+            ofstream fiyatYazma;
+            fiyatYazma.open("pantolon.txt", ios_base::app);
+            fiyatYazma << "-" << eklenmekIstenenUrunFiyati << "\n";
+            fiyatYazma.close();
+        }
+        else if (kategoriGirdi == 4) {
+            system("CLS");
+            string tekBirSatir1;
+            ifstream dosyaOkuma("gomlek.txt");
+
+            //kaç satır olduğunu bilmeliyiz
+            int güncelSatirSayisi = 1;
+            while (getline(dosyaOkuma, tekBirSatir1)) {
+                güncelSatirSayisi++;
+            }
+            dosyaOkuma.close();
+
+            ofstream guncelSatirSayisiYazma;
+            guncelSatirSayisiYazma.open("gomlek.txt", ios_base::app);
+            guncelSatirSayisiYazma << güncelSatirSayisi << "-";
+            guncelSatirSayisiYazma.close();
+
+
+            cout << "Lütfen Renk Bilgisini Giriniz.. (! Tek Karakter Giriniz M K B S !)\n" << endl;
+            char eklenmekIstenenUrunRengi;
+            cin >> eklenmekIstenenUrunRengi;
+
+            ofstream renkYazma;
+            renkYazma.open("gomlek.txt", ios_base::app);
+            renkYazma << eklenmekIstenenUrunRengi << "-";
+            renkYazma.close();
+
+
+            cout << "Ürününüzün İsmini Giriniz - (string !! tek kelime)\n" << endl;
+            string eklenmekIstenenUrunIsmi;
+            cin >> eklenmekIstenenUrunIsmi;
+
+            ofstream isimYazma;
+            isimYazma.open("gomlek.txt", ios_base::app);
+            isimYazma << eklenmekIstenenUrunIsmi;
+            isimYazma.close();
+
+            cout << "Lütfen Fiyat Giriniz..\n" << endl;
+            double eklenmekIstenenUrunFiyati;
+            cin >> eklenmekIstenenUrunFiyati;
+
+            ofstream fiyatYazma;
+            fiyatYazma.open("gomlek.txt", ios_base::app);
+            fiyatYazma << "-" << eklenmekIstenenUrunFiyati << "\n";
+            fiyatYazma.close();
+        }
+        else if (kategoriGirdi == 5) {
+            system("CLS");
+            string tekBirSatir1;
+            ifstream dosyaOkuma("etek.txt");
+
+            //kaç satır olduğunu bilmeliyiz
+            int güncelSatirSayisi = 1;
+            while (getline(dosyaOkuma, tekBirSatir1)) {
+                güncelSatirSayisi++;
+            }
+            dosyaOkuma.close();
+
+            ofstream guncelSatirSayisiYazma;
+            guncelSatirSayisiYazma.open("etek.txt", ios_base::app);
+            guncelSatirSayisiYazma << güncelSatirSayisi << "-";
+            guncelSatirSayisiYazma.close();
+
+
+            cout << "Lütfen Renk Bilgisini Giriniz.. (! Tek Karakter Giriniz M K B S !)\n" << endl;
+            char eklenmekIstenenUrunRengi;
+            cin >> eklenmekIstenenUrunRengi;
+
+            ofstream renkYazma;
+            renkYazma.open("etek.txt", ios_base::app);
+            renkYazma << eklenmekIstenenUrunRengi << "-";
+            renkYazma.close();
+
+
+            cout << "Ürününüzün İsmini Giriniz - (string !! tek kelime)\n" << endl;
+            string eklenmekIstenenUrunIsmi;
+            cin >> eklenmekIstenenUrunIsmi;
+
+            ofstream isimYazma;
+            isimYazma.open("etek.txt", ios_base::app);
+            isimYazma << eklenmekIstenenUrunIsmi;
+            isimYazma.close();
+
+            cout << "Lütfen Fiyat Giriniz..\n" << endl;
+            double eklenmekIstenenUrunFiyati;
+            cin >> eklenmekIstenenUrunFiyati;
+
+            ofstream fiyatYazma;
+            fiyatYazma.open("etek.txt", ios_base::app);
+            fiyatYazma << "-" << eklenmekIstenenUrunFiyati << "\n";
+            fiyatYazma.close();
+        }
+        else if (kategoriGirdi == 6) {
+            system("CLS");
+            string tekBirSatir1;
+            ifstream dosyaOkuma("ayakkabi.txt");
+
+            //kaç satır olduğunu bilmeliyiz
+            int güncelSatirSayisi = 1;
+            while (getline(dosyaOkuma, tekBirSatir1)) {
+                güncelSatirSayisi++;
+            }
+            dosyaOkuma.close();
+
+            ofstream guncelSatirSayisiYazma;
+            guncelSatirSayisiYazma.open("ayakkabi.txt", ios_base::app);
+            guncelSatirSayisiYazma << güncelSatirSayisi << "-";
+            guncelSatirSayisiYazma.close();
+
+
+            cout << "Lütfen Renk Bilgisini Giriniz.. (! Tek Karakter Giriniz M K B S !)\n" << endl;
+            char eklenmekIstenenUrunRengi;
+            cin >> eklenmekIstenenUrunRengi;
+
+            ofstream renkYazma;
+            renkYazma.open("ayakkabi.txt", ios_base::app);
+            renkYazma << eklenmekIstenenUrunRengi << "-";
+            renkYazma.close();
+
+
+            cout << "Ürününüzün İsmini Giriniz - (string !! tek kelime)\n" << endl;
+            string eklenmekIstenenUrunIsmi;
+            cin >> eklenmekIstenenUrunIsmi;
+
+            ofstream isimYazma;
+            isimYazma.open("ayakkabi.txt", ios_base::app);
+            isimYazma << eklenmekIstenenUrunIsmi;
+            isimYazma.close();
+
+            cout << "Lütfen Fiyat Giriniz..\n" << endl;
+            double eklenmekIstenenUrunFiyati;
+            cin >> eklenmekIstenenUrunFiyati;
+
+            ofstream fiyatYazma;
+            fiyatYazma.open("ayakkabi.txt", ios_base::app);
+            fiyatYazma << "-" << eklenmekIstenenUrunFiyati << "\n";
+            fiyatYazma.close();
+        }
+        else { cout << "Yanlış bir değer girdiniz 1 - 6 işaretlemelisiniz..\a\n"; }
+
+    
     }
 }
 
