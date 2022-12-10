@@ -132,6 +132,7 @@
   <ItemGroup>
     <ClInclude Include="kisi.h" />
     <ClInclude Include="kiyafet.h" />
+    <ClInclude Include="zaman.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

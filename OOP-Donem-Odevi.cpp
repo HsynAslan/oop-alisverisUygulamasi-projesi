@@ -6,6 +6,7 @@
 #include <string.h>
 #include <conio.h>
 #include "kisi.h"
+#include "zaman.h"
 using namespace std;
 #define MAX_NAME_LEN 60
 
@@ -81,10 +82,19 @@ void yoneticiEkrani() {
             while (getline(dosyaOkuma, tekBirSatir1)) {
                 güncelSatirSayisi++;
             }
+            if (güncelSatirSayisi != 1) { // NULL değil ise
+                ofstream altSatiraGecme;
+                altSatiraGecme.open("elbise.txt", ios_base::app);
+                altSatiraGecme << "\n";
+                altSatiraGecme.close();
+            }
+            
             dosyaOkuma.close();
 
             ofstream guncelSatirSayisiYazma;
             guncelSatirSayisiYazma.open("elbise.txt", ios_base::app);
+            
+            
             guncelSatirSayisiYazma << güncelSatirSayisi << "-";
             guncelSatirSayisiYazma.close();
 
@@ -114,7 +124,7 @@ void yoneticiEkrani() {
 
             ofstream fiyatYazma;
             fiyatYazma.open("elbise.txt", ios_base::app);
-            fiyatYazma << "-" << eklenmekIstenenUrunFiyati << "\n";
+            fiyatYazma << "-" << eklenmekIstenenUrunFiyati;
             fiyatYazma.close();
         }
         else if (kategoriGirdi == 2) {
@@ -127,10 +137,19 @@ void yoneticiEkrani() {
             while (getline(dosyaOkuma, tekBirSatir1)) {
                 güncelSatirSayisi++;
             }
+            if (güncelSatirSayisi != 1) { // NULL değil ise
+                ofstream altSatiraGecme;
+                altSatiraGecme.open("tisort.txt", ios_base::app);
+                altSatiraGecme << "\n";
+                altSatiraGecme.close();
+            }
+
             dosyaOkuma.close();
 
             ofstream guncelSatirSayisiYazma;
             guncelSatirSayisiYazma.open("tisort.txt", ios_base::app);
+
+
             guncelSatirSayisiYazma << güncelSatirSayisi << "-";
             guncelSatirSayisiYazma.close();
 
@@ -160,7 +179,7 @@ void yoneticiEkrani() {
 
             ofstream fiyatYazma;
             fiyatYazma.open("tisort.txt", ios_base::app);
-            fiyatYazma << "-" << eklenmekIstenenUrunFiyati << "\n";
+            fiyatYazma << "-" << eklenmekIstenenUrunFiyati;
             fiyatYazma.close();
         }
         else if (kategoriGirdi == 3) {
@@ -173,10 +192,19 @@ void yoneticiEkrani() {
             while (getline(dosyaOkuma, tekBirSatir1)) {
                 güncelSatirSayisi++;
             }
+            if (güncelSatirSayisi != 1) { // NULL değil ise
+                ofstream altSatiraGecme;
+                altSatiraGecme.open("pantolon.txt", ios_base::app);
+                altSatiraGecme << "\n";
+                altSatiraGecme.close();
+            }
+
             dosyaOkuma.close();
 
             ofstream guncelSatirSayisiYazma;
             guncelSatirSayisiYazma.open("pantolon.txt", ios_base::app);
+
+
             guncelSatirSayisiYazma << güncelSatirSayisi << "-";
             guncelSatirSayisiYazma.close();
 
@@ -206,7 +234,7 @@ void yoneticiEkrani() {
 
             ofstream fiyatYazma;
             fiyatYazma.open("pantolon.txt", ios_base::app);
-            fiyatYazma << "-" << eklenmekIstenenUrunFiyati << "\n";
+            fiyatYazma << "-" << eklenmekIstenenUrunFiyati;
             fiyatYazma.close();
         }
         else if (kategoriGirdi == 4) {
@@ -219,10 +247,19 @@ void yoneticiEkrani() {
             while (getline(dosyaOkuma, tekBirSatir1)) {
                 güncelSatirSayisi++;
             }
+            if (güncelSatirSayisi != 1) { // NULL değil ise
+                ofstream altSatiraGecme;
+                altSatiraGecme.open("gomlek.txt", ios_base::app);
+                altSatiraGecme << "\n";
+                altSatiraGecme.close();
+            }
+
             dosyaOkuma.close();
 
             ofstream guncelSatirSayisiYazma;
             guncelSatirSayisiYazma.open("gomlek.txt", ios_base::app);
+
+
             guncelSatirSayisiYazma << güncelSatirSayisi << "-";
             guncelSatirSayisiYazma.close();
 
@@ -252,7 +289,7 @@ void yoneticiEkrani() {
 
             ofstream fiyatYazma;
             fiyatYazma.open("gomlek.txt", ios_base::app);
-            fiyatYazma << "-" << eklenmekIstenenUrunFiyati << "\n";
+            fiyatYazma << "-" << eklenmekIstenenUrunFiyati;
             fiyatYazma.close();
         }
         else if (kategoriGirdi == 5) {
@@ -265,10 +302,19 @@ void yoneticiEkrani() {
             while (getline(dosyaOkuma, tekBirSatir1)) {
                 güncelSatirSayisi++;
             }
+            if (güncelSatirSayisi != 1) { // NULL değil ise
+                ofstream altSatiraGecme;
+                altSatiraGecme.open("etek.txt", ios_base::app);
+                altSatiraGecme << "\n";
+                altSatiraGecme.close();
+            }
+
             dosyaOkuma.close();
 
             ofstream guncelSatirSayisiYazma;
             guncelSatirSayisiYazma.open("etek.txt", ios_base::app);
+
+
             guncelSatirSayisiYazma << güncelSatirSayisi << "-";
             guncelSatirSayisiYazma.close();
 
@@ -298,7 +344,7 @@ void yoneticiEkrani() {
 
             ofstream fiyatYazma;
             fiyatYazma.open("etek.txt", ios_base::app);
-            fiyatYazma << "-" << eklenmekIstenenUrunFiyati << "\n";
+            fiyatYazma << "-" << eklenmekIstenenUrunFiyati;
             fiyatYazma.close();
         }
         else if (kategoriGirdi == 6) {
@@ -311,10 +357,19 @@ void yoneticiEkrani() {
             while (getline(dosyaOkuma, tekBirSatir1)) {
                 güncelSatirSayisi++;
             }
+            if (güncelSatirSayisi != 1) { // NULL değil ise
+                ofstream altSatiraGecme;
+                altSatiraGecme.open("ayakkabi.txt", ios_base::app);
+                altSatiraGecme << "\n";
+                altSatiraGecme.close();
+            }
+
             dosyaOkuma.close();
 
             ofstream guncelSatirSayisiYazma;
             guncelSatirSayisiYazma.open("ayakkabi.txt", ios_base::app);
+
+
             guncelSatirSayisiYazma << güncelSatirSayisi << "-";
             guncelSatirSayisiYazma.close();
 
@@ -344,7 +399,7 @@ void yoneticiEkrani() {
 
             ofstream fiyatYazma;
             fiyatYazma.open("ayakkabi.txt", ios_base::app);
-            fiyatYazma << "-" << eklenmekIstenenUrunFiyati << "\n";
+            fiyatYazma << "-" << eklenmekIstenenUrunFiyati;
             fiyatYazma.close();
         }
         else { cout << "Yanlış bir değer girdiniz 1 - 6 işaretlemelisiniz..\a\n"; }
@@ -372,9 +427,109 @@ void oneriSikayetYazma() {
     }
 
 }
+bool numaraCheck(string numara) {
+    string tekBirSatir;
+    string kisaCizgiArama = "-";
+    ifstream dosyaOkuma("elbise.txt");
+    while (getline(dosyaOkuma, tekBirSatir))
+    {
+        size_t found = tekBirSatir.find(kisaCizgiArama); // ilk cizgi bulma
+        if (found != string::npos)
+            int oAnkiCizgi = found;
+        string txtdekiNumara = tekBirSatir.substr(0, found); // ilk cizgi cekme
+        if (txtdekiNumara == numara) {
+            return true;
+            break;
+        }
+    }
+    return false;
+    dosyaOkuma.close();
+}
+void kiyafetKategorileriGoster() {
+kiyafetKategorilerineGeriDon:
+    fflush(stdin); // sonsuz döngüye girmesin buffer temizlemek için
+    system("CLS");
+    cout << "1.Elbise\n2.Tişort\n3.Pantolon\n4.Gömlek\n5.Etek\n6.Ayakkabı" << endl;
+    int kiyafetKategoriGirdi;
+    cin >> kiyafetKategoriGirdi;
+    system("CLS");
+    switch (kiyafetKategoriGirdi)
+    {
+    case 1:
+
+        ifstream dosyaOkuma("elbise.txt");
+        string tekbirsatirr;
+        while (getline(dosyaOkuma, tekbirsatirr)) {
+            cout << tekbirsatirr  << endl;
+        }
+        dosyaOkuma.close();
+        string cikisİcinGirdi;
+
+        cout << "Sepetinize Eklemek İstediğiniz Ürünün Numarasını Tuşlayınız.." << endl;
+        cout << "Eğer Geri Dönmek İstiyorsanız -1 tuşlayın" << endl;
+        cin >> cikisİcinGirdi;
+        // elbiseden istediği numara kontrol edilip ürün bilgileri fatura adlı txtye atılmalı
+        if (cikisİcinGirdi == "-1") {
+            // geri dönüşüm yapılmalı
+            goto kiyafetKategorilerineGeriDon;
+            cout << "geri dön " << endl;
+        }
+        else
+        {
+            if (numaraCheck(cikisİcinGirdi) == true) { // öyle bir numara var ise
+                // o numarayı fatura txtye atmak lazım
+
+                string tekBirSatir;
+                string kisaCizgiArama = "-";
+                ifstream dosyaOkuma("elbise.txt");
+                while (getline(dosyaOkuma, tekBirSatir))
+                {
+                    size_t found = tekBirSatir.find(kisaCizgiArama); // ilk cizgi bulma
+                    if (found != string::npos)
+                        int oAnkiCizgi = found;
+                    string txtdekiNumara = tekBirSatir.substr(0, found); // ilk cizgi cekme
+                    if (txtdekiNumara == cikisİcinGirdi) {
+                        // o satiri başka bir txtye yazma
+
+                        /*ofstream dosyaYaz;
+                        dosyaYaz.open("yonetici.txt", ios_base::app);
+                        dosyaYaz << uyeIsım << " " << uyeSoyIsım << " " << uyeSifre << " " << uyeDTarihi << " " << uygEPosta << "\n";
+                        dosyaYaz.close();*/
+
+                        ofstream faturayaYazma;
+                        faturayaYazma.open("fatura.txt", ios_base::app);
+
+                        cout << "Beden Bilgisi Giriniz.. (S, M, L, XL, XXL vs..)" << endl;
+                        string bedenBilgisi;
+                        cin >> bedenBilgisi;
+                        faturayaYazma << uygDakiYoneticiIsmi << " " << uygDakiYoneticiSoyIsmi << "/";//zaman gelcek buraya
+                        faturayaYazma << tekBirSatir<<"/"<<bedenBilgisi << "\n";
+                        cout << "Ürün Faturaya Geçildi" << endl;
+                        cout << "Devam etmek için -1 tuşlayınız.." << endl;
+                        int geridon=0;
+                        while (geridon != -1)
+                        {
+                            cin >> geridon;
+                        }
+                        goto kiyafetKategorilerineGeriDon;
+                    }
+                }
+                dosyaOkuma.close();
+            }
+            else
+            {
+                cout << "Yanlış Tuşlama Yaptınız.." << endl;
+            }
+            
+        }
+    
+
+    
+    }
+}
 
 void musteriEkrani() {
-    cout << "--- Doğrulandı ---" << endl;
+    
     cout << "1.Kıyafet kategorilerini göster" << endl;
     cout << "2.Sipariş takip" << endl;
     cout << "3.Şikayet/Öneriler(Geri bildirimler)" << endl;
@@ -384,18 +539,22 @@ void musteriEkrani() {
     cin >> musteriEkraniGirdi;
     switch (musteriEkraniGirdi)
     {
-    case 1:
-        cout << "1.worked" << endl;
-    case 2:
+        case 1:
+        kiyafetKategorileriGoster();
+        break;
+        case 2:
         cout << "2.worked" << endl;
-    case 3:
-        system("CLS");
+        break;
+        case 3:
+        cout << "3.worked" << endl;
         oneriSikayetYazma();
         break;
-    case 4:
+        case 4:
         cout << "4.worked" << endl;
-    case 5:
+        break;
+        case 5:
         cout << "5.worked" << endl;
+        break;
     }
 }
 
@@ -419,7 +578,7 @@ bool yoneticiMusteriCheck(string name, string lastName, string password) {
         size_t found3 = tekBirSatir.find(boslukArama, found2 + 1); // 3.boslugu bulma
         if (found != string::npos) // found2 ?
             int oAnkiBosluk3 = found3;
-        string txtDekiSifre = tekBirSatir.substr(found2 + 1, found3 - found2); // sifreyi cekme // hata var
+        string txtDekiSifre = tekBirSatir.substr(found2 + 1, found3 - found2-1); // sifreyi cekme // hata var
 
 
         if (txtDekiIsim == name && txtDekiSoyIsim == lastName && txtDekiSifre == password) {
@@ -635,3 +794,8 @@ int main()
     //cout << boolIsimSoyisimSifreKontrol;
 }
 
+
+
+
+
+// seni çook seviyorumm <3
