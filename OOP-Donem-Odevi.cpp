@@ -11,6 +11,7 @@
 #include <cmath>
 #include <chrono>
 #include <Windows.h>
+#include<conio.h>
 using namespace std;
 #define MAX_NAME_LEN 60
 
@@ -21,6 +22,8 @@ string uygDakiYoneticiSoyIsmi;
 string uygDakiYoneticiSifresi;
 string bulunanDTarihi;
 string bulunanEPosta;
+
+
 
 bool uyeSifreCheck(string name) {
     for (size_t i = 0; i < sizeof(name) - 1; i++)
@@ -1142,7 +1145,30 @@ void musteriEkrani() {
         {
             system("CLS");
             cout << "(içinde /, *, -, + olmalı)" << endl;
-            cin >> yeniSifre;
+
+
+            //cout << "Please enter login password:";
+            char s[10] = { 0 };
+            int i;
+            for (i = 0; i < 10; i++) {
+                s[i] = _getch();
+                if (s[i] == 13) {
+                    break;
+                }
+                else {
+                    _putch('*');
+                }
+            };
+            //printf("\nYour pass is %s", s);
+            getchar();
+
+            yeniSifre = s;
+            yeniSifre.pop_back();
+
+
+
+
+            // cin >> yeniSifre;
         } while (uyeSifreCheck(yeniSifre) != 1);
 
         //kisi kisi2(uygDakiYoneticiIsmi, uygDakiYoneticiSoyIsmi);
@@ -1201,9 +1227,8 @@ void yoneticiMusteriGirisi() {
     int yoneticiMusteriGirisi;
     cin >> yoneticiMusteriGirisi;
 
-    switch (yoneticiMusteriGirisi)
-    {
-    case 1:
+
+    if (yoneticiMusteriGirisi == 1) {
         system("CLS");
         cout << "İsminizi Giriniz" << endl;
         cout << "Eğer 2 isim sahibi iseniz boşluk bırakmayacak şekilde giriniz.." << endl;
@@ -1213,25 +1238,48 @@ void yoneticiMusteriGirisi() {
         system("CLS");
         cout << "Sifrenizi Giriniz" << endl;
         cout << "Maksimum 10 karakter girebilirsiniz.." << endl;
-        cin >> uygDakiYoneticiSifresi;
+
+
+
+        //cout << "Please enter login password:";
+        char s[10] = { 0 };
+        int i;
+        for (i = 0; i < 10; i++) {
+            s[i] = _getch();
+            if (s[i] == 13) {
+                break;
+            }
+            else {
+                _putch('*');
+            }
+        };
+        //printf("\nYour pass is %s", s);
+        getchar();
+        
+        uygDakiYoneticiSifresi = s;
+        uygDakiYoneticiSifresi.pop_back();
+
+
+        // cin >> uygDakiYoneticiSifresi;
         // yonetici ve musteri girisi kontrol
-        if (isimSoyisimSifreKontrol(uygDakiYoneticiIsmi, uygDakiYoneticiSoyIsmi, uygDakiYoneticiSifresi) == 1 && yoneticiMusteriCheck(uygDakiYoneticiIsmi, uygDakiYoneticiSoyIsmi, uygDakiYoneticiSifresi)==1) {
-            
+        if (isimSoyisimSifreKontrol(uygDakiYoneticiIsmi, uygDakiYoneticiSoyIsmi, uygDakiYoneticiSifresi) == 1 && yoneticiMusteriCheck(uygDakiYoneticiIsmi, uygDakiYoneticiSoyIsmi, uygDakiYoneticiSifresi) == 1) {
+
             kisi kisi1(uygDakiYoneticiIsmi, uygDakiYoneticiSoyIsmi);
             yonetici yonetici1(uygDakiYoneticiIsmi, uygDakiYoneticiSoyIsmi, uygDakiYoneticiSifresi);
-            
+
 
 
             system("CLS");
             cout << "--- Doğrulandı ---\n" << endl;
             yoneticiEkrani();
-            break;
+            
         }
         else { cout << "Giriş Bilgileri Hatalı..\a\n" << endl; }
 
 
-        break;
-    case 2:
+        
+    }
+    else if (yoneticiMusteriGirisi == 2) {
         system("CLS");
         cout << "İsminizi Giriniz" << endl;
         cout << "Eğer 2 isim sahibi iseniz boşluk bırakmayacak şekilde giriniz.." << endl;
@@ -1241,10 +1289,31 @@ void yoneticiMusteriGirisi() {
         system("CLS");
         cout << "Sifrenizi Giriniz" << endl;
         cout << "Maksimum 10 karakter girebilirsiniz.." << endl;
-        cin >> uygDakiYoneticiSifresi;
+
+
+        //cout << "Please enter login password:";
+        char s[10] = { 0 };
+        int i;
+        for (i = 0; i < 10; i++) {
+            s[i] = _getch();
+            if (s[i] == 13) {
+                break;
+            }
+            else {
+                _putch('*');
+            }
+        };
+        //printf("\nYour pass is %s", s);
+        getchar();
+
+        uygDakiYoneticiSifresi = s;
+        uygDakiYoneticiSifresi.pop_back();
+
+
+        // cin >> uygDakiYoneticiSifresi;
 
         if (isimSoyisimSifreKontrol(uygDakiYoneticiIsmi, uygDakiYoneticiSoyIsmi, uygDakiYoneticiSifresi) == 1 && yoneticiMusteriCheck(uygDakiYoneticiIsmi, uygDakiYoneticiSoyIsmi, uygDakiYoneticiSifresi) == 0) {
-            
+
             // kisi kisi2(uygDakiYoneticiIsmi, uygDakiYoneticiSoyIsmi);
             // // kullanici(string isim, string soyisim, string sifre2, string dTarihi2, string ePosta2) : kisi(isim, soyisim)
             // kullanici kullanici1();
@@ -1255,13 +1324,14 @@ void yoneticiMusteriGirisi() {
             system("CLS");
             cout << "--- Doğrulandı ---\n" << endl;
             musteriEkrani();
-            break;
+            
         }
         else { cout << "Giriş Bilgileri Hatalı..\a\n" << endl; }
 
 
-        break;
+        
     }
+    
 }
 
 bool uyeDTarihiCheck(string tarih) {
@@ -1297,7 +1367,29 @@ void uyeKaydiEkrani() {
     cout << "Lütfen Soyisminizi giriniz.. (string)" << endl;
     cin >> uyeSoyIsım;
     cout << "Lütfen Şifrenizi Giriniz.. (içinde +, -, *, / bulunmak zorunda yoksa hata verir)" << endl;
-    cin >> uyeSifre;
+
+
+    //cout << "Please enter login password:";
+    char s[10] = { 0 };
+    int i;
+    for (i = 0; i < 10; i++) {
+        s[i] = _getch();
+        if (s[i] == 13) {
+            break;
+        }
+        else {
+            _putch('*');
+        }
+    };
+    //printf("\nYour pass is %s", s);
+    getchar();
+
+    uyeSifre = s;
+    uyeSifre.pop_back();
+
+
+
+    // cin >> uyeSifre;
     while (uyeSifreCheck(uyeSifre) != 1) {
         cout << "Güçsüz şifre lütfen /, *, -, + karakterlerinden birini şifrenizde bulundurun.." << endl;
         

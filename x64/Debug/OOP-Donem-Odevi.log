@@ -1,1 +1,28 @@
-﻿  OOP-Donem-Odevi.vcxproj -> C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\x64\Debug\OOP-Donem-Odevi.exe
+﻿  OOP-Donem-Odevi.cpp
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(31,12): warning C4554: '|': olası hata için işleç önceliğini denetleyin; önceliği netleştirmek için parantez kullanın
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(31,78): warning C4554: '|': olası hata için işleç önceliğini denetleyin; önceliği netleştirmek için parantez kullanın
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(44,36): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(48,38): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(55,38): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(537,35): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(588,47): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(663,51): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(738,51): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(813,51): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(888,51): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(963,51): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(1020,36): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(1024,38): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(1031,38): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(1038,38): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(1045,38): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(1093,36): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(1097,38): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(1104,38): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(1111,38): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(1118,38): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(1193,36): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(1197,38): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(1204,38): warning C4267: 'başlatılıyor': 'size_t' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\OOP-Donem-Odevi.cpp(1220): warning C4715: 'yoneticiMusteriCheck': tüm denetim yolları değer döndürmez
+  OOP-Donem-Odevi.vcxproj -> C:\Users\User\Desktop\Okul\3.sınıf\oop\proje\OOP-Donem-Odevi\x64\Debug\OOP-Donem-Odevi.exe
