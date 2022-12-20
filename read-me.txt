@@ -1,0 +1,30 @@
+2022-2023 OOP Dönem Ödevi
+
+
+
+Proje Sahipleri
+
+394788 Hüseyin Aslan
+394812 Barış Koç
+
+
+
+Projemizde 2 proje sahibinin 3. sınıf olmasından
+ve birçok proje içinde olmamızdan kaynaklandığı için 
+projeyi oopye uyarlamada eksiklerimizin olduğunun farkındayız.
+Bu konuda bilgi eksikliği olduğumuzu düşünmüyoruz 
+bu sorun için zaman darlığını göz önünde bulundurmanızı rica ediyoruz.
+
+
+Projemiz bir alışveriş sitesidir.
+Kullanıcılar.txt dosyasında hem üyeler hem yöneticiler istenildiği gibi birlikte tutulmaktadır.
+kıyafet almak için ise 6 adet (elbise.txt, etek.txt gibi farklı txtlerde tutulmaktadır.).
+
+Kullanıcılar.txt de isim soyisim şifre bilgisi olanlar yönetici,
+isim soyisim şifre doğum tarihi e posta bilgisi tutulanlar üye olarak ayrılmıştır.
+Burda dosya okuma yapıp temel Regular Expression kullanılmıştır.
+
+Projemizi düzenli olarak GitHub'a commitledik.
+GitHub linki:
+https://github.com/HsynAslan/oop-donem-odevi.git
+
